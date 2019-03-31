@@ -1,11 +1,12 @@
-# README
+# 3vent MVP
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+```
+Ruby v 2.5.3
+Rails v 5.2.3
 
-Things you may want to cover:
-
-* Ruby version
+Postgresql Database
+Devise Auth
+```
 
 * System dependencies
 
@@ -20,5 +21,3 @@ Things you may want to cover:
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
-
-* ...
