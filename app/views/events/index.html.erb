@@ -1,0 +1,14 @@
+<main>
+  <% @events.each do |event| %>
+    <article class='event-wrapper'>
+      <p class='name'><%= event.name %></p>
+      <p class='description'><%= event.description %></p>
+      <p class='start-date'><%= event.start %></p>
+      <p class='end-date'><%= event.end %></p>
+
+      <%= link_to 'Edit this event', edit_event_path(event) %>
+    </article>
+  <% end %>
+
+  <%= link_to 'Create a new event', new_event_path %>
+</main>

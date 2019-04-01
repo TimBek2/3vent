@@ -1,11 +1,18 @@
 <main>
-  <header>
+  <header class='header homepage'>
     <h1>Hello there</h1>
     <h3>General Kenobi</h3>
     <h5>Welcome to 3vent</h5>
   </header>
 
   <section>
-
+    <% @events.each do |event| %>
+      <article class='event-wrapper'>
+        <p class='name'><%= event.name %></p>
+        <p class='description'><%= event.description %></p>
+        <p class='start-date'><%= event.start %></p>
+        <p class='end-date'><%= event.end %></p>
+      </article>
+    <% end %>
   </section>
 </main>
