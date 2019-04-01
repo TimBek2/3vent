@@ -2,4 +2,9 @@
   <h2 class="name"><%= @event.name %></h2>
 
   <p class="description"><%= @event.description %></p>
+
+  <h5>Users who like this show:</h5>
+  <% @event.users.each do |user| %>
+    <p><%= user.email %></p>
+  <% end %>
 </main>

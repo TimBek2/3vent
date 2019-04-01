@@ -5,7 +5,9 @@
       <p class='description'><%= event.description %></p>
       <p class='start-date'><%= event.start %></p>
       <p class='end-date'><%= event.end %></p>
+      <p class='likes-count'><%= event.likes.count %></p>
 
+      <%= link_to 'Details', event_path(event) %>
       <%= link_to 'Edit this event', edit_event_path(event) %>
     </article>
   <% end %>
