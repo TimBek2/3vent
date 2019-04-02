@@ -1,0 +1,23 @@
+<main>
+  <h3>Create an Event</h3>
+
+  <%= form_for @event,
+      url: { action: "create" },
+      html: { class: 'event-form' } do |f| %>
+
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+
+    <%= f.label :start, 'Event Start date and time' %>
+    <%= f.datetime_local_field :start %>
+
+    <%= f.label :end, 'Event End date and time' %>
+    <%#= date_tag :end_date %>
+    <%= f.datetime_local_field :end %>
+
+    <%= f.submit %>
+  <% end %>
+</main>

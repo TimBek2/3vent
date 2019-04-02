@@ -1,0 +1,34 @@
+<main>
+  <h3>Update an Event</h3>
+
+  <%= form_for @event,
+      url: { action: "update" },
+      html: { class: 'event-form' } do |f| %>
+    <div>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+
+    <div>
+      <%= f.label :description %>
+      <%= f.text_area :description %>
+    </div>
+
+    <div>
+      <%= f.label :start, 'Event Start date and time' %>
+      <%= f.datetime_local_field :start %>
+    </div>
+
+    <div>
+      <%= f.label :end, 'Event End date and time' %>
+      <%= f.datetime_local_field :end %>
+    </div>
+
+    <%= f.submit %>
+  <% end %>
+
+  <%= link_to 'Delete this event',
+      event_path(@event),
+      method: :delete,
+      data: { confirm: "Are you sure you want to delete this event?" } %>
+</main>
